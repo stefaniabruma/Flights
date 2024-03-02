@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+
+<AnchorPane prefHeight="592.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airlineflights.ClientController">
+   <children>
+      <TableView fx:id="ticketsTableView" layoutX="20.0" layoutY="53.0" prefHeight="156.0" prefWidth="421.0">
+        <columns>
+          <TableColumn fx:id="flightIdColumn" prefWidth="63.199954986572266" text="Flight ID" />
+          <TableColumn fx:id="purchaseTimeColumn" prefWidth="358.40000915527344" text="Purchase Time" />
+        </columns>
+      </TableView>
+      <Label layoutX="20.0" layoutY="23.0" text="Your tickets:" />
+      <Line endX="193.4000244140625" endY="-31.599987030029297" layoutX="561.0" layoutY="54.0" startX="-72.19998168945312" startY="-31.599987030029297" />
+      <Line endX="-54.699981689453125" endY="-95.59999084472656" layoutX="543.0" layoutY="118.0" startX="-54.699981689453125" startY="143.60003662109375" />
+      <Label layoutX="496.0" layoutY="32.0" text="Hurry up!!! Look how many tickets were already" />
+      <Label layoutX="496.0" layoutY="53.0" text="sold for 24th of January flights!" />
+      <TableView fx:id="adTableView" layoutX="502.0" layoutY="85.0" prefHeight="200.0" prefWidth="252.0">
+        <columns>
+          <TableColumn fx:id="flightIdAdColumn" prefWidth="57.599945068359375" text="Flight ID" />
+          <TableColumn fx:id="purchaseTimeAdColumn" prefWidth="194.39996337890625" text="Purchase Time" />
+        </columns>
+      </TableView>
+      <Line endX="317.3999938964844" endY="-31.599990844726562" layoutX="121.0" layoutY="270.0" startX="-93.79999542236328" startY="-31.599990844726562" />
+      <Label layoutX="27.0" layoutY="253.0" text="Search for a flight:" />
+      <Label layoutX="47.0" layoutY="294.0" text="From:" />
+      <ComboBox fx:id="fromComboBox" layoutX="111.0" layoutY="290.0" prefWidth="150.0" />
+      <Label layoutX="54.0" layoutY="331.0" text="To:" />
+      <ComboBox fx:id="toComboBox" layoutX="111.0" layoutY="327.0" prefWidth="150.0" />
+      <Label layoutX="22.0" layoutY="370.0" text="Departure Day:" />
+      <DatePicker fx:id="departureDayDatePicker" layoutX="111.0" layoutY="366.0" />
+      <TableView fx:id="flightsTableView" layoutX="10.0" layoutY="406.0" prefHeight="119.0" prefWidth="788.0">
+        <columns>
+          <TableColumn fx:id="fromColumn" prefWidth="86.39998435974121" text="From" />
+          <TableColumn fx:id="toColumn" prefWidth="113.5999526977539" text="To" />
+            <TableColumn fx:id="departureColumn" prefWidth="195.20001220703125" text="Departure Time" />
+            <TableColumn fx:id="landingColumn" prefWidth="166.39993286132812" text="Landing Time" />
+            <TableColumn fx:id="seatsColumn" prefWidth="69.60003662109375" text="No. Seats" />
+            <TableColumn fx:id="avColumn" prefWidth="83.2000732421875" text="No. Seats Av" />
+            <TableColumn fx:id="idFlightsColumn" prefWidth="72.0" text="Flight ID" />
+        </columns>
+      </TableView>
+      <Line endX="-72.80001831054688" endY="24.5999755859375" layoutX="424.0" layoutY="353.0" startX="-72.80001831054688" startY="-81.0" />
+      <Line endX="215.4000244140625" endY="0.0999755859375" layoutX="539.0" layoutY="378.0" startX="-187.30001831054688" startY="0.0999755859375" />
+      <Button layoutX="689.0" layoutY="534.0" mnemonicParsing="false" onAction="#handleBuy" text="Cumpara" />
+   </children>
+</AnchorPane>
